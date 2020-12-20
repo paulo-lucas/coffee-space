@@ -1,0 +1,73 @@
+header
+{
+  min-height: 80px;
+  border-bottom: solid 1px #292929;
+}
+
+header .header-content
+{
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.homelink
+{
+  height: 55px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  text-decoration: none;
+}
+
+.homelink .cslogo
+{
+  height: 100%;
+}
+
+.homelink .cstitle
+{
+  font-family: 'Oswald', sans-serif;
+  color: #292929;
+}
+
+nav
+{
+
+}
+
+nav .ul-pages
+{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  height: 100%;
+}
+
+nav .ul-pages .li-page
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+}
+
+nav .ul-pages .li-page:not(.li-page.aaa)
+{
+  border-left: 2px solid black
+}
+
+nav .ul-pages .li-page .pagelink
+{
+  text-decoration: none;
+}
+
+nav .ul-pages .li-page .pagelink h2
+{
+  color: #292929;
+  font-size: 12pt;
+}
