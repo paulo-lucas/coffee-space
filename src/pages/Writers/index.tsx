@@ -1,8 +1,8 @@
 import React from 'react';
-import './styles.css';
 
-export default function Writer () {
+
+export default function Writers () {
   return (
-    <div></div>
+    <div><h1>Writer list</h1></div>
   );
 }
