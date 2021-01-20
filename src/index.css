@@ -6,6 +6,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+
+  --color-primary: #1E2227;
+  --color-secondary-dark: #2D5C53;
+  --color-secondary-light: #6EB8A8;
+  --color-font-dark: #292929;
+  --color-font-light: #f0f0f5;
+
+  --header-height: 80px;
 }
 
 body

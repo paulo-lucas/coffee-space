@@ -1,14 +1,15 @@
 header
 {
-  min-height: 80px;
-  border-bottom: solid 1px #292929;
+  height: var(--header-height);
+  background-color: var(--color-secondary-dark);
+  border-bottom: solid 1px var(--color-primary);
 }
 
 header .header-content
 {
   height: 100%;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 0 20px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -31,12 +32,7 @@ header .header-content
 .homelink .cstitle
 {
   font-family: 'Oswald', sans-serif;
-  color: #292929;
-}
-
-nav
-{
-
+  color: var(--color-font-light);
 }
 
 nav .ul-pages
@@ -53,21 +49,80 @@ nav .ul-pages .li-page
   flex-direction: row;
   align-items: center;
   height: 100%;
-  padding: 0 10px;
+  padding: 0 20px;
+  transition: background-color .1s;
 }
 
-nav .ul-pages .li-page:not(.li-page.aaa)
-{
-  border-left: 2px solid black
+nav .ul-pages .li-page:active {
+  background-color: var(--color-secondary-light);
 }
 
 nav .ul-pages .li-page .pagelink
 {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 nav .ul-pages .li-page .pagelink h2
 {
-  color: #292929;
+  color: var(--color-font-light);
   font-size: 12pt;
+}
+
+#menu-checkbox {
+  display: none;
+}
+
+#menu-btn {
+  display: none;
+  position: fixed;
+  width: var(--header-height);
+  height: var(--header-height);
+  top:0;
+  right:0;
+  align-items: center;
+  justify-content: center;
+}
+
+#menu-btn img {
+  height: 60%;
+}
+
+@media screen and (max-width: 640px) {
+  #menu-btn {
+    display:flex;
+  }
+
+  nav {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: var(--header-height);
+    right: -240px;
+    transition: all .2s ease-out;
+  }
+
+  #menu-checkbox:checked + .header-content > nav {
+    right: 0;
+  }
+
+  nav .ul-pages {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: var(--color-secondary-dark);
+  }
+
+  nav .ul-pages .li-page
+  {
+    width: 100%;
+    height: var(--header-height);
+  }
+
+  nav .ul-pages .li-page .pagelink {
+    width: 100%;
+    height: 100%;
+  }
 }
