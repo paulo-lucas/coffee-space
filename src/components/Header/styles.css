@@ -2,7 +2,8 @@ header
 {
   height: var(--header-height);
   background-color: var(--color-secondary-dark);
-  border-bottom: solid 1px var(--color-primary);
+  border-bottom: solid 2px black;
+  box-shadow: 0 3px 10px black;
 }
 
 header .header-content
@@ -17,7 +18,8 @@ header .header-content
 
 .homelink
 {
-  height: 55px;
+  height: 100%;
+  padding: 10px 0;
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-end;
@@ -100,7 +102,8 @@ nav .ul-pages .li-page .pagelink h2
     height: 100vh;
     position: fixed;
     top: var(--header-height);
-    right: -240px;
+    right: -250px;
+    box-shadow: -3px 5px 8px black;
     transition: all .2s ease-out;
   }
 

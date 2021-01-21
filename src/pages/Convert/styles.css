@@ -1,0 +1,11 @@
+#convert-page {
+    min-height: calc(100vh - var(--header-height));
+}
+
+#convert-page .writer-box {
+    width: 80vw;
+}
+
+#convert-page .markdown {
+    
+}
